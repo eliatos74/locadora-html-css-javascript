@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>WDA-livraria</title>
+        <link rel="stylesheet" href="../css/books.css" />
+    </head>
+    <body>
+        <div class="sidebar" id="sidebar">
+            <div class="logo">
+                <img src="../images/logo.svg" alt="" />
+            </div>
+            <ul>
+                <li>
+                    <img
+                        src="../images/dashboard.svg"
+                        alt=""
+                        class="logo-adjustment"
+                    />
+                    Dashboard
+                </li>
+                <li>
+                    <img
+                        src="../images/aluguel.svg"
+                        alt=""
+                        class="logo-adjustment"
+                    />
+                    Aluguel
+                </li>
+                <li class="active-page">
+                    <svg
+                        class="logo-adjustment"
+                        width="23"
+                        height="21"
+                        viewBox="0 0 23 21"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M19.8576 20.752C20.5728 20.752 21.2587 20.535 21.7644 20.1488C22.2702 19.7626 22.5543 19.2388 22.5543 18.6927V2.21824C22.5543 1.07533 21.3408 0.158936 19.8576 0.158936H11.7675V7.36649L8.39659 5.82202L5.02571 7.36649V0.158936H3.67736C2.96215 0.158936 2.27623 0.375897 1.7705 0.762091C1.26477 1.14829 0.980652 1.67208 0.980652 2.21824V18.6927C0.980652 19.2388 1.26477 19.7626 1.7705 20.1488C2.27623 20.535 2.96215 20.752 3.67736 20.752H19.8576Z"
+                            fill="white"
+                        />
+                    </svg>
+                    Livros
+                </li>
+                <li>
+                    <img
+                        src="../images/editoras.svg"
+                        alt=""
+                        class="logo-adjustment"
+                    />
+                    Editoras
+                </li>
+                <li>
+                    <img
+                        src="../images/locatarios.svg"
+                        alt=""
+                        class="logo-adjustment"
+                    />
+                    Locatários
+                </li>
+                <li>
+                    <img
+                        src="../images/usuarios.svg"
+                        alt=""
+                        class="logo-adjustment"
+                    />
+                    Usuários
+                </li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <div class="main-header">
+                <img src="../images/side.svg" alt="" id="toggleSidebar" />
+                <img src="../images/logout.svg" alt="" id="btnLogout" />
+            </div>
+            <div class="header">
+                <div>
+                    <h1>Livros</h1>
+                </div>
+                <div class="header-source">
+                    <input type="text" placeholder="Pesquisar..." />
+                    <button id="openModalButton" class="add-button">
+                        + Novo
+                    </button>
+                </div>
+            </div>
+            <div class="table-class">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Autor</th>
+                            <th>Editora</th>
+                            <th>Data de Lançamento</th>
+                            <th>Quantidade</th>
+                            <th class="actions">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>LUGARES PERDIDOS</td>
+                            <td>MARIA DO SOCORRO</td>
+                            <td>MAPA</td>
+                            <td>06/07/2024</td>
+                            <td>12</td>
+                            <td class="aligning-actions">
+                                <button id="edit-button1" class="edit-button">
+                                    <img src="../images/lapis.svg" alt="" />
+                                </button>
+                                <button
+                                    id="delete-button1"
+                                    class="delete-button"
+                                >
+                                    <img src="../images/lixeira.svg" alt="" />
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>VENTO AO MAR</td>
+                            <td>MARIA DO SOCORRO</td>
+                            <td>MAPA</td>
+                            <td>06/07/2024</td>
+                            <td>3</td>
+                            <td class="aligning-actions">
+                                <button id="edit-button2" class="edit-button">
+                                    <img src="../images/lapis.svg" alt="" />
+                                </button>
+                                <button
+                                    id="delete-button2"
+                                    class="delete-button"
+                                >
+                                    <img src="../images/lixeira.svg" alt="" />
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Cadastrar Livro</h2>
+                    <span id="closeModalButton" class="close">&times;</span>
+                </div>
+                <form class="modal-body">
+                    <div id="cadastrarLivroForm">
+                        <label for="nome">Nome</label>
+                        <input
+                            type="text"
+                            id="nome"
+                            name="nome"
+                            placeholder="Digite o nome do livro"
+                        />
+
+                        <label for="autor">Autor</label>
+                        <input
+                            type="text"
+                            id="autor"
+                            name="autor"
+                            placeholder="Digite o nome do autor"
+                        />
+
+                        <label for="editora">Editora</label>
+                        <input
+                            type="text"
+                            id="editora"
+                            name="editora"
+                            placeholder="Digite a editora"
+                        />
+
+                        <label for="dataLancamento">Data de Lançamento</label>
+                        <input
+                            type="date"
+                            id="dataLancamento"
+                            name="dataLancamento"
+                        />
+
+                        <label for="estoque">Estoque</label>
+                        <input
+                            type="number"
+                            id="estoque"
+                            name="estoque"
+                            placeholder="Digite a quantidade em estoque"
+                        />
+
+                        <div class="modal-footer">
+                            <button
+                                type="button"
+                                id="closeModalFooterButton"
+                                class="cancel-button"
+                            >
+                                Fechar
+                            </button>
+                            <button
+                                id="submit-button"
+                                type="button"
+                                class="submit-button"
+                            >
+                                Cadastrar
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="modal-edit" class="modal-edit">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Editar Livro</h2>
+                    <span id="closeModalEditButton" class="close">&times;</span>
+                </div>
+                <form class="modal-body">
+                    <div id="editarLivroForm">
+                        <label for="nome">Nome</label>
+                        <input
+                            type="text"
+                            id="nome"
+                            name="nome"
+                            placeholder="Digite o nome do livro"
+                            value="LUGARES PERDIDOS"
+                        />
+
+                        <label for="autor">Autor</label>
+                        <input
+                            type="text"
+                            id="autor"
+                            name="autor"
+                            placeholder="Digite o nome do autor"
+                            value="MARIA DO SOCORRO"
+                        />
+
+                        <label for="editora">Editora</label>
+                        <input
+                            type="text"
+                            id="editora"
+                            name="editora"
+                            placeholder="Digite a editora"
+                            value="MAPA"
+                        />
+
+                        <label for="dataLancamento">Data de Lançamento</label>
+                        <input
+                            type="date"
+                            id="dataLancamento"
+                            name="dataLancamento"
+                            value="2024-07-06"
+                        />
+
+                        <label for="estoque">Estoque</label>
+                        <input
+                            type="number"
+                            id="estoque"
+                            name="estoque"
+                            placeholder="Digite a quantidade em estoque"
+                            value="12"
+                        />
+
+                        <div class="modal-footer">
+                            <button
+                                id="closeEditButton"
+                                type="button"
+                                id="closeModalFooterButton"
+                                class="cancel-button"
+                            >
+                                Fechar
+                            </button>
+                            <button
+                                id="submit-edit-button"
+                                type="button"
+                                class="submit-button"
+                            >
+                                Salvar
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="modal-delete" class="modal-delete">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Excluir Livro</h2>
+                    <span id="closeModalDeleteButton" class="close">
+                        &times;
+                    </span>
+                </div>
+                <div class="modal-body">
+                    <form id="deletarLivroForm">
+                        <h1>Deseja realmente excluir esse livro ?</h1>
+                        <div class="modal-footer">
+                            <button
+                                id="closeDeleteButton"
+                                type="button"
+                                id="closeModalFooterButton"
+                                class="cancel-button"
+                            >
+                                Fechar
+                            </button>
+                            <button
+                                id="submit-delete-button"
+                                type="submit"
+                                class="submit-button"
+                            >
+                                Confirmar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="pagination">
+            <button class="pagination-button">&lt;</button>
+            <button class="pagination-button active">1</button>
+            <button class="pagination-button">2</button>
+            <button class="pagination-button">3</button>
+            <button class="pagination-button">4</button>
+            <button class="pagination-button">&gt;</button>
+        </div>
+        <div id="toastBox"></div>
+        <script src="../javascript/books.js"></script>
+    </body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>WDA-livraria</title>
+        <link rel="stylesheet" href="../css/dashboard.css" />
+    </head>
+    <body>
+        <div class="sidebar" id="sidebar">
+            <div class="logo">
+                <img src="../images/logo.svg" alt="" />
+            </div>
+            <ul>
+                <li class="active-page">
+                    <svg
+                        class="logo-adjustment"
+                        width="24"
+                        height="23"
+                        viewBox="0 0 24 23"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M12.8216 8.92778V1.85608H21.6789V8.92778H12.8216ZM2.81317 12.3579V1.85608H11.6234V12.3579H2.81317ZM12.8216 20.6748V10.126H21.6789V20.6748H12.8216ZM2.81317 20.6748V13.5796H11.6234V20.6748H2.81317ZM4.97462 10.22H9.48547V3.99404H4.97462V10.22ZM14.9831 18.5133H19.5409V12.2874H14.9831V18.5133ZM14.9831 6.78982H19.5409V3.99404H14.9831V6.78982ZM4.97462 18.5133H9.48547V15.741H4.97462V18.5133Z"
+                            fill="white"
+                        />
+                    </svg>
+                    Dashboard
+                </li>
+                <li>
+                    <img
+                        src="../images/aluguel.svg"
+                        alt=""
+                        class="logo-adjustment"
+                    />
+                    Aluguel
+                </li>
+                <li>
+                    <img
+                        src="../images/livro.svg"
+                        alt=""
+                        class="logo-adjustment"
+                    />
+                    Livros
+                </li>
+                <li>
+                    <img
+                        src="../images/editoras.svg"
+                        alt=""
+                        class="logo-adjustment"
+                    />
+                    Editoras
+                </li>
+                <li>
+                    <img
+                        src="../images/locatarios.svg"
+                        alt=""
+                        class="logo-adjustment"
+                    />
+                    Locatários
+                </li>
+                <li>
+                    <img
+                        src="../images/usuarios.svg"
+                        alt=""
+                        class="logo-adjustment"
+                    />
+                    Usuários
+                </li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <div class="main-header">
+                <img src="../images/side.svg" alt="" id="toggleSidebar" />
+                <img src="../images/logout.svg" alt="" id="btnLogout" />
+            </div>
+            <div class="body_dashboard">
+                <div class="header">
+                    <div>
+                        <h1>Dashboard</h1>
+                    </div>
+                </div>
+                <section class="dashboard-content">
+                    <div class="dashboard-cards">
+                        <div class="card">
+                            <img src="../images/most_rented_book.svg" alt="" />
+                            <p>Livro mais alugado: Harry potter</p>
+                        </div>
+                        <div class="cards">
+                            <div class="card">
+                                <img
+                                    src="../images/borrowed_books.svg"
+                                    alt=""
+                                />
+                                <p>Livros emprestados: 100</p>
+                            </div>
+                            <div class="card">
+                                <img src="../images/late_books.svg" alt="" />
+                                <p>Livros atrasados: 5</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="charts">
+                        <div class="chart">
+                            <canvas id="graph"></canvas>
+                        </div>
+                        <div class="table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Usuários</th>
+                                        <th>Totais de empréstimos</th>
+                                        <th>Aluguel ativo</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Elias Santos</td>
+                                        <td>7</td>
+                                        <td>3</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Augusto Lima</td>
+                                        <td>7</td>
+                                        <td>3</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bruna Mara</td>
+                                        <td>7</td>
+                                        <td>3</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ricardo Ribeiro</td>
+                                        <td>7</td>
+                                        <td>3</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Marcio Rocha</td>
+                                        <td>7</td>
+                                        <td>3</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Manoel Gomes</td>
+                                        <td>7</td>
+                                        <td>3</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Felipe Souza</td>
+                                        <td>7</td>
+                                        <td>3</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="../javascript/dashboard.js"></script>
+    </body>
+</html>

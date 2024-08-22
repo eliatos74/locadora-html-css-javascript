@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>WDA-livraria</title>
+        <link rel="stylesheet" href="../css/rent.css" />
+    </head>
+    <body>
+        <div class="sidebar" id="sidebar">
+            <div class="logo">
+                <img src="../images/logo.svg" alt="" />
+            </div>
+            <ul>
+                <li>
+                    <img
+                        src="../images/dashboard.svg"
+                        alt=""
+                        class="logo-adjustment"
+                    />
+                    Dashboard
+                </li>
+                <li class="active-page">
+                    <svg
+                        class="logo-adjustment"
+                        width="23"
+                        height="22"
+                        viewBox="0 0 23 22"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M11.8644 18.5809H3.13783V4.1985H0.980469V18.5809C0.980469 19.1259 1.20776 19.6485 1.61235 20.0338C2.01693 20.4191 2.56566 20.6356 3.13783 20.6356H12.641C12.2443 20.0053 11.9805 19.3074 11.8644 18.5809ZM18.2394 0.0892334H12.846V5.22582L10.6886 3.68484L8.53125 5.22582V0.0892334H7.45256C6.88039 0.0892334 6.33166 0.305703 5.92708 0.691021C5.52249 1.07634 5.2952 1.59894 5.2952 2.14387V14.4717C5.2952 15.0166 5.52249 15.5392 5.92708 15.9245C6.33166 16.3098 6.88039 16.5263 7.45256 16.5263H11.8644C12.0215 15.6404 12.38 14.7979 12.9149 14.0578C13.4498 13.3177 14.1481 12.6979 14.9609 12.2418C15.7738 11.7858 16.6815 11.5045 17.6204 11.4176C18.5594 11.3308 19.507 11.4404 20.3967 11.739V2.14387C20.3967 1.59894 20.1695 1.07634 19.7649 0.691021C19.3603 0.305703 18.8116 0.0892334 18.2394 0.0892334ZM19.3181 13.4443V16.5263H22.5541V18.5809H19.3181V21.6629H17.1607V18.5809H13.9247V16.5263H17.1607V13.4443H19.3181Z"
+                            fill="white"
+                        />
+                    </svg>
+
+                    Aluguel
+                </li>
+                <li>
+                    <img
+                        class="logo-adjustment"
+                        src="../images/aluguel.svg"
+                        alt=""
+                    />
+                    Livros
+                </li>
+                <li>
+                    <img
+                        src="../images/editoras.svg"
+                        alt=""
+                        class="logo-adjustment"
+                    />
+                    Editoras
+                </li>
+                <li>
+                    <img
+                        src="../images/locatarios.svg"
+                        alt=""
+                        class="logo-adjustment"
+                    />
+                    Locatários
+                </li>
+                <li>
+                    <img
+                        src="../images/usuarios.svg"
+                        alt=""
+                        class="logo-adjustment"
+                    />
+                    Usuários
+                </li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <div class="main-header">
+                <img src="../images/side.svg" alt="" id="toggleSidebar" />
+                <img src="../images/logout.svg" alt="" id="btnLogout" />
+            </div>
+            <div class="header">
+                <div>
+                    <h1>Alugueis</h1>
+                </div>
+                <div class="header-source">
+                    <input type="text" placeholder="Pesquisar..." />
+                    <button id="openModalButton" class="add-button">
+                        + Novo
+                    </button>
+                </div>
+            </div>
+            <div class="table-class">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome do Locatario</th>
+                            <th>Nome do Livro</th>
+                            <th>Editora</th>
+                            <th>Autor</th>
+                            <th>Status de Aluguel</th>
+                            <th class="actions">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ELIAS SANTOS</td>
+                            <td>O SENHOR DOS ANEIS</td>
+                            <td>CAMPANHIA DAS LETRAS</td>
+                            <td>J.R.R TOLKIEN</td>
+                            <td>
+                                <div class="refund">
+                                    <p>DATA DEVOLUÇÃO: 07/07/24</p>
+                                    <div class="refund_status">
+                                        <p>STATUS:</p>
+                                        <p id="color_refund" class="refund_color_blue">EM ANDAMENTO</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="aligning-actions">
+                                <button id="delete-button" class="confirm_refund">
+                                    <img
+                                        src="../images/confirmar_devolucao.svg"
+                                        alt=""
+                                    />
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>DEBORA MARIA</td>
+                            <td>1984 - SEGUNDA GUERRA</td>
+                            <td>EDITORA GLOBO</td>
+                            <td>GEORGE ORWELL</td>
+                            <td>
+                                <div class="refund">
+                                    <p>DATA DEVOLUÇÃO: 07/06/24</p>
+                                    <div class="refund_status">
+                                        <p>STATUS:</p>
+                                        <p class="refund_color_red">ATRASADO</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="aligning-actions">
+                                <button class="confirm_refund">
+                                    <img
+                                        src="../images/confirmar_devolucao.svg"
+                                        alt=""
+                                    />
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>MONOEL ALMEIDA</td>
+                            <td>PÉ DE FEIJÃO</td>
+                            <td>CAMPANHIA DAS LETRAS</td>
+                            <td>RABISCO</td>
+                            <td>
+                                <div class="refund">
+                                    <p>DATA DEVOLUÇÃO: 01/07/24</p>
+                                    <div class="refund_status">
+                                        <p>STATUS:</p>
+                                        <p class="refund_color_green">DEVOLVIDO</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="aligning-actions">
+                                <button class="confirm_refund">
+                                    <img
+                                        src="../images/confirmar_devolucao.svg"
+                                        alt=""
+                                    />
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- MODAIS -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Registrar Aluguel</h2>
+                    <span id="closeModalButton" class="close">&times;</span>
+                </div>
+                <form class="modal-body">
+                    <div id="cadastrarLivroForm">
+                        <label for="nome">Nome do Locatario</label>
+                        <input
+                            type="text"
+                            id="nome"
+                            name="nome"
+                            placeholder="Digite o nome do livro"
+                        />
+
+                        <label for="autor">Nome do Livro</label>
+                        <input
+                            type="text"
+                            id="autor"
+                            name="autor"
+                            placeholder="Digite o nome do autor"
+                        />
+
+                        <label for="dataLancamento">Data de Devolução</label>
+                        <input
+                            type="date"
+                            id="dataLancamento"
+                            name="dataLancamento"
+                        />
+
+                        <div class="modal-footer">
+                            <button
+                                type="button"
+                                id="closeModalFooterButton"
+                                class="cancel-button"
+                            >
+                                Fechar
+                            </button>
+                            <button
+                                id="submit-button"
+                                type="button"
+                                class="submit-button"
+                            >
+                                Cadastrar
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="modal-delete" class="modal-delete">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Confirmar Devolução</h2>
+                    <span id="closeModalDeleteButton" class="close">
+                        &times;
+                    </span>
+                </div>
+                <div class="modal-body">
+                    <form id="deletarLivroForm">
+                        <h1>Confirmar devolução do livro ?</h1>
+                        <div class="modal-footer">
+                            <button
+                                id="closeDeleteButton"
+                                type="button"
+                                id="closeModalFooterButton"
+                                class="cancel-button"
+                            >
+                                Fechar
+                            </button>
+                            <button
+                                id="submit-delete-button"
+                                type="submit"
+                                class="submit-button"
+                            >
+                                Confirmar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="pagination">
+            <button class="pagination-button">&lt;</button>
+            <button class="pagination-button active">1</button>
+            <button class="pagination-button">2</button>
+            <button class="pagination-button">3</button>
+            <button class="pagination-button">4</button>
+            <button class="pagination-button">&gt;</button>
+        </div>
+        <div id="toastBox"></div>
+        <script src="../javascript/rent.js"></script>
+    </body>
+</html>

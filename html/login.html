@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>WDA Livraria</title>
+        <link rel="stylesheet" href="../css/login.css" />
+    </head>
+    <body>
+        <div class="logo">
+            <img src="../images/logo.svg" alt="" />
+        </div>
+        <div class="form">
+            <form class="login-form">
+                <h1>Faça seu login</h1>
+                <div class="input-group">
+                    <label for="email"><i class="fa fa-envelope"></i></label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Digite seu email"
+                        required
+                    />
+                </div>
+                <div class="input-group">
+                    <label for="password"><i class="fa fa-lock"></i></label>
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Digite sua senha"
+                        required
+                    />
+                </div>
+                <button id="loginBtn" type="submit">Fazer login</button>
+                <a id="recover_password" href="#" class="forgot-password">Esqueceu a senha?</a>
+            </form>
+        </div>
+        <script src="../javascript/login.js"></script>
+    </body>
+</html>

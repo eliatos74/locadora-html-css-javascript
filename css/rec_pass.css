@@ -1,0 +1,38 @@
+.message_body {
+    display: flex;
+    justify-content: center;
+    color: white;
+    margin-top: 100px;
+}
+
+.itens_body {
+    text-align: center;
+}
+
+.itens_body h1 {
+    margin-bottom: 50px;
+}
+
+.itens_body h2 {
+    margin-bottom: 50px;
+}
+
+.button {
+    background-color: #1e4b8e;
+    border: 2px solid #28a745;
+    color: #28a745;
+    padding: 10px 20px;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background-color: #28a745;
+    color: #1e4b8e; 
+    border: 2px solid #1e4b8e;
+}
