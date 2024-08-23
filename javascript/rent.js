@@ -50,13 +50,6 @@ closeButton.onclick = function () {
     modal.style.display = "none";
 };
 
-// FECHAR MODAL CLIQUE FORA DO MODAL
-window.onclick = function (event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-};
-
 // EXIBIR MENSAGEM DE CADASTRO DE SUCESSO
 submitButton.onclick = function (event) {
     event.preventDefault();
@@ -87,13 +80,6 @@ closeDeleteModalButton.onclick = function () {
 // FECHAR MODAL DE EXCLUSAO COM CLIQUE NO BOTÃO DE FECHAR
 closeDeleteButton.onclick = function () {
     modalDelete.style.display = "none";
-};
-
-// FECHAR MODAL DE EXCLUSAO COM CLIQUE FORA DO MODAL
-window.onclick = function (event) {
-    if (event.target == modalDelete) {
-        modalDelete.style.display = "none";
-    }
 };
 
 // EXIBIR MENSAGEM DE EXCLUSÃO DE SUCESSO

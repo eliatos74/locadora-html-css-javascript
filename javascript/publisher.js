@@ -1,9 +1,3 @@
-// SAIR DO SISTEMA
-document.getElementById("btnLogout").addEventListener("click", function () {
-    console.log("Sair do sistema");
-    window.location.href = "../html/login.html";
-});
-
 // TOGGLE SIDEBAR
 document.addEventListener("DOMContentLoaded", () => {
     const toggleButton = document.getElementById("toggleSidebar");
@@ -14,6 +8,26 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+// BOTÃO DE LOGOUT
+document.getElementById("btnLogout").addEventListener("click", () => {
+    window.location.href = "../html/login.html";
+});
+
+// LOGICA DA MENSAGEM DE NOTIFICAÇÃO
+let toastBox = document.getElementById("toastBox");
+let mensagemEditoraCadastro = "Editora adicionada com sucesso!";
+let mensagemEditoraEdicao = "Editora editada com sucesso!";
+let mensagemEditoraExclusao = "Editora excluida com sucesso!";
+
+function showToast(msg) {
+    let toast = document.createElement("div");
+    toast.classList.add("toast");
+    toast.innerText = msg;
+    toastBox.appendChild(toast);
+    setTimeout(() => {
+        toast.remove();
+    }, 3000);
+}
 
 // CAPTURA DE ELEMENTOS DO MODAL DE CRIÇÃO
 const modal = document.getElementById("modal");
@@ -37,11 +51,35 @@ closeButton.onclick = function () {
     modal.style.display = "none";
 };
 
+// FECHAR MODAL CLIQUE FORA DO MODAL
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+};
+
 // EXIBIR MENSAGEM DE CADASTRO DE SUCESSO
 submitButton.onclick = function (event) {
-    event.preventDefault(); 
+    event.preventDefault();
     modal.style.display = "none";
-    showToast(mensagemLivroCadastro);
+    showToast(mensagemEditoraCadastro);
+};
+
+const modalView = document.getElementById("modal-view");
+const viewButton = document.getElementById("view-button");
+const closeViewModalButton = document.getElementById("closeModalViewButton");
+const closeViewButton = document.getElementById("closeViewButton");
+
+viewButton.onclick = function () {
+    modalView.style.display = "block";
+};
+
+closeViewModalButton.onclick = function () {
+    modalView.style.display = "none";
+};
+
+closeViewButton.onclick = function () {
+    modalView.style.display = "none";
 };
 
 // CAPTURA DE ELEMENTOS DO MODAL DE EDIÇÃO //
@@ -66,17 +104,20 @@ closeEditButton.onclick = function () {
     modalEdit.style.display = "none";
 };
 
+
 // EXIBIR MENSAGEM DE EDIÇÃO DE SUCESSO
 submitEditButton.onclick = function (event) {
     event.preventDefault();
     modalEdit.style.display = "none";
-    showToast(mensagemLivroEdicao);
-}
+    showToast(mensagemEditoraEdicao);
+};
 
 // CAPTURA DE ELEMENTOS DO MODAL DE EXCLUSÃO
 const modalDelete = document.getElementById("modal-delete");
 const deleteButton = document.getElementById("delete-button1");
-const closeDeleteModalButton = document.getElementById("closeModalDeleteButton");
+const closeDeleteModalButton = document.getElementById(
+    "closeModalDeleteButton"
+);
 const closeDeleteButton = document.getElementById("closeDeleteButton");
 const submitDeleteButton = document.getElementById("submit-delete-button");
 
@@ -99,21 +140,5 @@ closeDeleteButton.onclick = function () {
 submitDeleteButton.onclick = function (event) {
     event.preventDefault();
     modalDelete.style.display = "none";
-    showToast(mensagemLivroExclusao);
-}
-
-// LOGICA DA MENSAGEM DE NOTIFICAÇÃO
-let toastBox = document.getElementById("toastBox");
-let mensagemLivroCadastro = "Livro adiconado com sucesso!";
-let mensagemLivroEdicao = "Livro editado com sucesso!";
-let mensagemLivroExclusao = "Livro excluído com sucesso!";
-
-function showToast(msg) {
-    let toast = document.createElement("div");
-    toast.classList.add("toast");
-    toast.innerText = msg;
-    toastBox.appendChild(toast);
-    setTimeout(() => {
-        toast.remove();
-    }, 3000);
-}
+    showToast(mensagemEditoraExclusao);
+};

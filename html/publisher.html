@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>WDA-livraria</title>
+        <link rel="stylesheet" href="../css/publisher.css" />
+    </head>
+    <body>
+        <div class="sidebar" id="sidebar">
+            <div class="logo">
+                <img src="../images/logo.svg" alt="" />
+            </div>
+            <ul>
+                <li>
+                    <img
+                        src="../images/dashboard.svg"
+                        alt=""
+                        class="logo-adjustment"
+                    />
+                    Dashboard
+                </li>
+                <li>
+                    <img
+                        src="../images/aluguel.svg"
+                        alt=""
+                        class="logo-adjustment"
+                    />
+                    Aluguel
+                </li>
+                <li>
+                    <img
+                        src="../images/livro.svg"
+                        alt=""
+                        class="logo-adjustment"
+                    />
+                    Livros
+                </li>
+                <li class="active-page">
+                    <svg
+                        class="logo-adjustment"
+                        width="23"
+                        height="20"
+                        viewBox="0 0 23 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M18.4553 8.81867L8.92884 17.0461V19.8605H3.25156C1.99121 19.8605 0.980652 18.9877 0.980652 17.8992V2.20929C0.980652 1.13061 1.99121 0.248047 3.25156 0.248047H4.38702V7.11239L7.22565 5.64146L10.0643 7.11239V0.248047H16.877C18.126 0.248047 19.1479 1.1208 19.1479 2.20929V8.38719C18.8981 8.50487 18.6597 8.64216 18.4553 8.81867ZM11.1997 17.86V19.8605H13.5161L20.4764 13.8591L18.1601 11.8488L11.1997 17.86ZM22.384 11.4958L20.8852 10.2013C20.6581 10.0052 20.2834 10.0052 20.0676 10.2013L18.9549 11.1623L21.2712 13.1628L22.384 12.2018C22.6111 12.0155 22.6111 11.6919 22.384 11.4958Z"
+                            fill="white"
+                        />
+                    </svg>
+
+                    Editoras
+                </li>
+                <li>
+                    <img
+                        src="../images/locatarios.svg"
+                        alt=""
+                        class="logo-adjustment"
+                    />
+                    Locatários
+                </li>
+                <li>
+                    <img
+                        src="../images/usuarios.svg"
+                        alt=""
+                        class="logo-adjustment"
+                    />
+                    Usuários
+                </li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <div class="main-header">
+                <img src="../images/side.svg" alt="" id="toggleSidebar" />
+                <img src="../images/logout.svg" alt="" id="btnLogout" />
+            </div>
+            <div class="header">
+                <div>
+                    <h1>Editoras</h1>
+                </div>
+                <div class="header-source">
+                    <input type="text" placeholder="Pesquisar..." />
+                    <button id="openModalButton" class="add-button">
+                        + Novo
+                    </button>
+                </div>
+            </div>
+            <div class="table-class">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>E-mail</th>
+                            <th>Telefone</th>
+                            <th class="actions">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>EDITORA PRIMEIRA CLASSE</td>
+                            <td>editoraprimeiraclasse@teste.com</td>
+                            <td>(88)999999999</td>
+                            <td class="aligning-actions">
+                                <button id="view-button" class="view-button">
+                                    <img src="../images/olho.svg" alt="" />
+                                </button>
+                                <button id="edit-button1" class="edit-button">
+                                    <img src="../images/lapis.svg" alt="" />
+                                </button>
+                                <button
+                                    id="delete-button1"
+                                    class="delete-button"
+                                >
+                                    <img src="../images/lixeira.svg" alt="" />
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>EDITORA PAPEL</td>
+                            <td>PAPEPEDITORA@teste.com</td>
+                            <td>(88)8888888888</td>
+                            <td class="aligning-actions">
+                                <button id="view-button" class="view-button">
+                                    <img src="../images/olho.svg" alt="" />
+                                </button>
+                                <button id="edit-button1" class="edit-button">
+                                    <img src="../images/lapis.svg" alt="" />
+                                </button>
+                                <button
+                                    id="delete-button1"
+                                    class="delete-button"
+                                >
+                                    <img src="../images/lixeira.svg" alt="" />
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>EDITORA VEJA</td>
+                            <td>veja@teste.com</td>
+                            <td>(88)8472849324</td>
+                            <td class="aligning-actions">
+                                <button id="view-button" class="view-button">
+                                    <img src="../images/olho.svg" alt="" />
+                                </button>
+                                <button id="edit-button1" class="edit-button">
+                                    <img src="../images/lapis.svg" alt="" />
+                                </button>
+                                <button
+                                    id="delete-button1"
+                                    class="delete-button"
+                                >
+                                    <img src="../images/lixeira.svg" alt="" />
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Cadastrar Editora</h2>
+                    <span id="closeModalButton" class="close">&times;</span>
+                </div>
+                <form class="modal-body">
+                    <div id="cadastrarLivroForm">
+                        <label for="nome">Nome</label>
+                        <input
+                            type="text"
+                            id="nome"
+                            name="nome"
+                            placeholder="Digite o nome da editora"
+                        />
+
+                        <label for="autor">Email</label>
+                        <input
+                            type="text"
+                            id="autor"
+                            name="autor"
+                            placeholder="Digite o email"
+                        />
+
+                        <label for="editora">Telefone</label>
+                        <input
+                            type="text"
+                            id="editora"
+                            name="editora"
+                            placeholder="Digite o telefone"
+                        />
+                        <label for="editora">Site</label>
+                        <input
+                            type="text"
+                            id="editora"
+                            name="editora"
+                            placeholder="Digite o site"
+                        />
+
+                        <div class="modal-footer">
+                            <button
+                                type="button"
+                                id="closeModalFooterButton"
+                                class="cancel-button"
+                            >
+                                Fechar
+                            </button>
+                            <button
+                                id="submit-button"
+                                type="button"
+                                class="submit-button"
+                            >
+                                Cadastrar
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="modal-view" class="modal-view">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Visualizar Editora</h2>
+                    <span id="closeModalViewButton" class="close">&times;</span>
+                </div>
+                <form class="modal-body">
+                    <div id="visualizarLivroForm">
+                        <label for="nome">Nome</label>
+                        <input
+                            type="text"
+                            id="nome"
+                            name="nome"
+                            placeholder="Digite o nome da editora"
+                            value="EDITORA PRIMEIRA CLASSE"
+                            disabled
+                        />
+
+                        <label for="autor">Email</label>
+                        <input
+                            type="text"
+                            id="autor"
+                            name="autor"
+                            placeholder="Digite o email da editora"
+                            value="editoraprimeiraclasse@teste.com"
+                            disabled
+                        />
+
+                        <label for="editora">Telefone</label>
+                        <input
+                            type="text"
+                            id="editora"
+                            name="editora"
+                            placeholder="Digite o telefone"
+                            value="(88)999999999"
+                            disabled
+                        />
+                        <label for="editora">Site</label>
+                        <input
+                            type="text"
+                            id="editora"
+                            name="editora"
+                            placeholder="Digite o site"
+                            value="www.editoraprimeiraclasse.com.br"
+                            disabled
+                        />
+                        <div class="modal-footer">
+                            <button
+                                id="closeViewButton"
+                                type="button"
+                                id="closeModalFooterButton"
+                                class="cancel-button"
+                                disabled
+                            >
+                                Fechar
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="modal-edit" class="modal-edit">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Editar Editora</h2>
+                    <span id="closeModalEditButton" class="close">&times;</span>
+                </div>
+                <form class="modal-body">
+                    <div id="editarLivroForm">
+                        <label for="nome">Nome</label>
+                        <input
+                            type="text"
+                            id="nome"
+                            name="nome"
+                            placeholder="Digite o nome da editora"
+                            value="EDITORA PRIMEIRA CLASSE"
+                        />
+
+                        <label for="autor">Email</label>
+                        <input
+                            type="text"
+                            id="autor"
+                            name="autor"
+                            placeholder="Digite o email da editora"
+                            value="editoraprimeiraclasse@teste.com"
+                        />
+
+                        <label for="editora">Telefone</label>
+                        <input
+                            type="text"
+                            id="editora"
+                            name="editora"
+                            placeholder="Digite o telefone"
+                            value="(88)999999999"
+                        />
+                        <label for="editora">Site</label>
+                        <input
+                            type="text"
+                            id="editora"
+                            name="editora"
+                            placeholder="Digite o site"
+                            value="www.editoraprimeiraclasse.com.br"
+                        />
+                        <div class="modal-footer">
+                            <button
+                                id="closeEditButton"
+                                type="button"
+                                id="closeModalFooterButton"
+                                class="cancel-button"
+                            >
+                                Fechar
+                            </button>
+                            <button
+                                id="submit-edit-button"
+                                type="button"
+                                class="submit-button"
+                            >
+                                Salvar
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="modal-delete" class="modal-delete">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Excluir Editora</h2>
+                    <span id="closeModalDeleteButton" class="close">
+                        &times;
+                    </span>
+                </div>
+                <div class="modal-body">
+                    <form id="deletarLivroForm">
+                        <h1>Deseja realmente excluir essa editora ?</h1>
+                        <div class="modal-footer">
+                            <button
+                                id="closeDeleteButton"
+                                type="button"
+                                id="closeModalFooterButton"
+                                class="cancel-button"
+                            >
+                                Fechar
+                            </button>
+                            <button
+                                id="submit-delete-button"
+                                type="submit"
+                                class="submit-button"
+                            >
+                                Confirmar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="pagination">
+            <button class="pagination-button">&lt;</button>
+            <button class="pagination-button active">1</button>
+            <button class="pagination-button">2</button>
+            <button class="pagination-button">3</button>
+            <button class="pagination-button">4</button>
+            <button class="pagination-button">&gt;</button>
+        </div>
+        <div id="toastBox"></div>
+        <script src="../javascript/publisher.js"></script>
+    </body>
+</html>
