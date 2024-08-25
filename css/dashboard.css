@@ -5,6 +5,7 @@ body {
     font-family: "Montserrat", sans-serif;
     display: flex;
     flex-direction: column;
+    font-weight: 500;
     height: calc(100vh - 100px);
 }
 
