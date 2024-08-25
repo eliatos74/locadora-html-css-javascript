@@ -1,5 +1,6 @@
 // ENTRAR NO SISTEMA
-document.getElementById("loginBtn").addEventListener("click", function () {
+document.getElementById("loginBtn").addEventListener("click", function (event) {
+    event.preventDefault();
     console.log("Entrar no sistema");
     window.location.href = "../html/dashboard.html";
 });
