@@ -1,7 +1,7 @@
 // SAIR DO SISTEMA
 document.getElementById("btnLogout").addEventListener("click", function () {
     console.log("Sair do sistema");
-    window.location.href = "../html/login.html";
+    window.location.href = "/index.html";
 });
 
 // TOGGLE SIDEBAR

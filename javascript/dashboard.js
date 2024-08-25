@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // BOTÃO DE LOGOUT
 document.getElementById("btnLogout").addEventListener("click", () => {
-    window.location.href = "../html/login.html";
+    window.location.href = "/index.html";
 });
 
 
