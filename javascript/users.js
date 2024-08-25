@@ -15,9 +15,9 @@ document.getElementById("btnLogout").addEventListener("click", () => {
 
 // LOGICA DA MENSAGEM DE NOTIFICAÇÃO
 let toastBox = document.getElementById("toastBox");
-let mensagemEditoraCadastro = "Editora adicionada com sucesso!";
-let mensagemEditoraEdicao = "Editora editada com sucesso!";
-let mensagemEditoraExclusao = "Editora excluida com sucesso!";
+let mensagemUsuarioCadastro = "Usuário adicionado com sucesso!";
+let mensagemUsuarioEdicao = "Usuário editado com sucesso!";
+let mensagemUsuarioExclusao = "Usuário excluido com sucesso!";
 
 function showToast(msg) {
     let toast = document.createElement("div");
@@ -51,37 +51,11 @@ closeButton.onclick = function () {
     modal.style.display = "none";
 };
 
-// FECHAR MODAL CLIQUE FORA DO MODAL
-window.onclick = function (event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-};
-
 // EXIBIR MENSAGEM DE CADASTRO DE SUCESSO
 submitButton.onclick = function (event) {
     event.preventDefault();
     modal.style.display = "none";
-    showToast(mensagemEditoraCadastro);
-};
-
-// CAPTURA DE ELEMENTOS DO MODAL DE VISUALIZAÇÃO //
-const modalView = document.getElementById("modal-view");
-const viewButton = document.getElementById("view-button");
-const closeViewModalButton = document.getElementById("closeModalViewButton");
-const closeViewButton = document.getElementById("closeViewButton");
-
-viewButton.onclick = function () {
-    modalView.style.display = "block";
-};
-
-closeViewModalButton.onclick = function () {
-    console.log("entrou");
-    modalView.style.display = "none";
-};
-
-closeViewButton.onclick = function () {
-    modalView.style.display = "none";
+    showToast(mensagemUsuarioCadastro);
 };
 
 // CAPTURA DE ELEMENTOS DO MODAL DE EDIÇÃO //
@@ -110,7 +84,7 @@ closeEditButton.onclick = function () {
 submitEditButton.onclick = function (event) {
     event.preventDefault();
     modalEdit.style.display = "none";
-    showToast(mensagemEditoraEdicao);
+    showToast(mensagemUsuarioEdicao);
 };
 
 // CAPTURA DE ELEMENTOS DO MODAL DE EXCLUSÃO
@@ -141,7 +115,7 @@ closeDeleteButton.onclick = function () {
 submitDeleteButton.onclick = function (event) {
     event.preventDefault();
     modalDelete.style.display = "none";
-    showToast(mensagemEditoraExclusao);
+    showToast(mensagemUsuarioExclusao);
 };
 
 // MUDAR DE PAGINAS

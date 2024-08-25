@@ -96,3 +96,35 @@ function alterarCorStatus() {
     classeDevolução.classList.add("refund_color_green");
     classeDevolução.textContent = "DEVOLVIDO";
 }
+
+// MUDAR DE PAGINAS
+const dashbord = document.getElementById("dashboard")
+const aluguel = document.getElementById("aluguel")
+const livros = document.getElementById("livros")
+const editoras = document.getElementById("editoras")
+const locatarios = document.getElementById("locatarios")
+const usuarios = document.getElementById("usuarios")
+
+dashbord.onclick = () => {
+    window.location.href = "../html/dashboard.html";
+}
+
+aluguel.onclick = () => {
+    window.location.href = "../html/rent.html";
+}
+
+livros.onclick = () => {
+    window.location.href = "../html/books.html";
+}
+
+editoras.onclick = () => {
+    window.location.href = "../html/publisher.html";
+}
+
+locatarios.onclick = () => {
+    window.location.href = "../html/tenant.html";
+}
+
+usuarios.onclick = () => {
+    window.location.href = "../html/users.html";
+}

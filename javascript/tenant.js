@@ -15,9 +15,9 @@ document.getElementById("btnLogout").addEventListener("click", () => {
 
 // LOGICA DA MENSAGEM DE NOTIFICAÇÃO
 let toastBox = document.getElementById("toastBox");
-let mensagemEditoraCadastro = "Editora adicionada com sucesso!";
-let mensagemEditoraEdicao = "Editora editada com sucesso!";
-let mensagemEditoraExclusao = "Editora excluida com sucesso!";
+let mensagemLocatarioCadastro = "Locatário adicionado com sucesso!";
+let mensagemLocatarioEdicao = "Locatário editado com sucesso!";
+let mensagemLocatarioExclusao = "Locatário excluido com sucesso!";
 
 function showToast(msg) {
     let toast = document.createElement("div");
@@ -51,18 +51,11 @@ closeButton.onclick = function () {
     modal.style.display = "none";
 };
 
-// FECHAR MODAL CLIQUE FORA DO MODAL
-window.onclick = function (event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-};
-
 // EXIBIR MENSAGEM DE CADASTRO DE SUCESSO
 submitButton.onclick = function (event) {
     event.preventDefault();
     modal.style.display = "none";
-    showToast(mensagemEditoraCadastro);
+    showToast(mensagemLocatarioCadastro);
 };
 
 // CAPTURA DE ELEMENTOS DO MODAL DE VISUALIZAÇÃO //
@@ -110,7 +103,7 @@ closeEditButton.onclick = function () {
 submitEditButton.onclick = function (event) {
     event.preventDefault();
     modalEdit.style.display = "none";
-    showToast(mensagemEditoraEdicao);
+    showToast(mensagemLocatarioEdicao);
 };
 
 // CAPTURA DE ELEMENTOS DO MODAL DE EXCLUSÃO
@@ -141,7 +134,7 @@ closeDeleteButton.onclick = function () {
 submitDeleteButton.onclick = function (event) {
     event.preventDefault();
     modalDelete.style.display = "none";
-    showToast(mensagemEditoraExclusao);
+    showToast(mensagemLocatarioExclusao);
 };
 
 // MUDAR DE PAGINAS
